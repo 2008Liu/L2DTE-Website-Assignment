@@ -1,27 +1,30 @@
+/*Imports the "Nunito Sans" font into the file.*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+/*Styles the body tag which is where content such as the text and photos are.*/
 body {
-    width: 100%;
-    margin: 0%;
+    width: 100%;/*Sets the width of the chosen tag to 100% of the width of its container element, which in this case is the device sceen.*/
+    margin: 0%;/*Sets the margin, or empty space around the chosen tag, to 0% or none.*/
+    background-color: #000000;/*Makes the chosen tag's background color black.*/
 }
-
+/*The header tag is for content at the top of a webpage. Here, it'll be a navigation bar.*/
 header {
     margin: 0%;
-    max-width: 100%;
-    height: 10vh;
-    background-color: #000000;
+    width: 100%;/*Sets the width of the chosen tag to 100% of the width of the body tag.*/
+    height: 5vw;/*Sets the height of the chosen tag to 5vw, with vw being a unit that relates to the device screen width.*/
+    background-color: #ffffff;/*Sets the chosen tag's background color to white.*/
+    text-align: right;/*Aligns text inside the chosen tag to the right.*/
 }
-
+/*The a tag is for links to content outside the webpage such as other webpages and websites.*/
 a {
-    margin: 0%;
-    color: #ffffff;
-    line-height: 10vh;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Nunito Sans", sans-serif;
-    transition: 0.5s;
+    margin: 0% 3vw 0% 0%;/*Sets the margin of the chosen tag to none except for the right margin which is 3vw.*/
+    color: #000000;/*Sets the color of the chosen tag to black.*/
+    line-height: 5vw;/*Sets the line height, or the vertical height between two lines of text, of the chosen tag to 5vh.*/
+    text-decoration: none;/*Removes any addition to the a tag, which has an underline by default.*/
+    font-family: "Nunito Sans", sans-serif; /*Sets the font of the a tag to "Nunito Sans".*/
+    font-size: 1.5vw;/*Sets the font size to 1.5vw.*/
+    transition: 0.25s;/*Sets the time the chosen tag transitions an element which is determined in the chosen element's :hover to 0.25 seconds.*/
 }
-
+/*The :hover is used to stylise the chosen tag when the cursor hovers over it.*/
 a:hover {
-    color: #000000;
+    color: #a9a9a9;/*Sets the color when the cursor hovers over the chosen tag to grey.*/
 }
