@@ -2,29 +2,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /*Styles the body tag which is where content such as the text and photos are.*/
 body {
-    width: 100%;/*Sets the width of the chosen tag to 100% of the width of its container element, which in this case is the device sceen.*/
-    margin: 0%;/*Sets the margin, or empty space around the chosen tag, to 0% or none.*/
-    background-color: #000000;/*Makes the chosen tag's background color black.*/
+    width: 100%; /*Sets the width of the chosen tag to 100% of the width of its container element, which in this case is the device screen.*/
+    height: 100%; /* Sets the height of the chosen tag to 100% of the height of its container element, which in this case is the device screen.*/
+    margin: 0%; /*Sets the margin, or empty space around the chosen tag, to 0% or none.*/
+    display: flex; /*Sets the type of box that the tag is rendered in. In this instance, the flex type is chosen which allows the manipulation of the aspects of elements inside the tag.*/
+    flex-direction: column; /*Sets the direction of the elements inside the flex tag to column or top to bottom.*/
+    background-color: #ffffff; /*Makes the chosen tag's background color white.*/
 }
 /*The header tag is for content at the top of a webpage. Here, it'll be a navigation bar.*/
-header {
+header{
+    display: block; /*Sets the display type to block which treats the element as separate from other tags through line breaks.*/
     margin: 0%;
-    width: 100%;/*Sets the width of the chosen tag to 100% of the width of the body tag.*/
-    height: 5vw;/*Sets the height of the chosen tag to 5vw, with vw being a unit that relates to the device screen width.*/
-    background-color: #ffffff;/*Sets the chosen tag's background color to white.*/
-    text-align: right;/*Aligns text inside the chosen tag to the right.*/
+    width: 100%; /*Sets the width of the chosen tag to 100% of the width of the body tag.*/
+    height: 7vw; /*Sets the height of the chosen tag to 5vw, with vw being a unit that relates to the device screen width.*/
+    background-color: #ffffff;
 }
-/*The a tag is for links to content outside the webpage such as other webpages and websites.*/
-a {
-    margin: 0% 3vw 0% 0%;/*Sets the margin of the chosen tag to none except for the right margin which is 3vw.*/
-    color: #000000;/*Sets the color of the chosen tag to black.*/
-    line-height: 5vw;/*Sets the line height, or the vertical height between two lines of text, of the chosen tag to 5vh.*/
-    text-decoration: none;/*Removes any addition to the a tag, which has an underline by default.*/
-    font-family: "Nunito Sans", sans-serif; /*Sets the font of the a tag to "Nunito Sans".*/
-    font-size: 1.5vw;/*Sets the font size to 1.5vw.*/
-    transition: 0.25s;/*Sets the time the chosen tag transitions an element which is determined in the chosen element's :hover to 0.25 seconds.*/
+/*The footer tag for content at the bottom of a webpage. Here, it'll contain a copyright notice*/
+footer {
+    margin: 0%;
+    bottom: 0%; /*Sets the position of the tag to the bottom of the page.*/
+    text-align: center; /*Sets text inside the tag to the horizontal center of it.*/
+    position: initial; /*Sets the position of the tag to its default value.*/
+    width: 100%;
+    height: 4vw;
+    background-color: #ffffff;
+}
+/*a is the tag for hyperlinks while h1 and p are both tags for text, with h1 for big text such as titles and p being for small text like paragraphs. input[type-button] is a tag which the user interacts with, in this case pressing on it due to its type being a button.*/
+a, h1, p, h6, input[type=button] {
+    font-family: "Nunito Sans", sans-serif; /*This sets the font of the selected tags to "Nunito Sans".*/
+}
+/*.pages is a class. Classes are sets of styles which can be placed onto one or multiple tags. This class is for links to content outside the webpage such as other webpages and websites.*/
+.pages {
+    float: right; /*Makes the text align to the right of the element its inside of, which is the header tag.*/
+    margin: 0% 4vw 0% 4vw; /*Sets the margin of the chosen tag to none except for the right and left margin which is 4vw, with the margin order being top, left, bottom and right.*/
+    line-height: 7vw; /*Sets the line height, or the vertical height between two lines of text, of the chosen tag to 5vh.*/
+    text-decoration: none; /*Removes any addition to the a tag, which has an underline by default.*/
+    font-size: 1.5vw; /*Sets the font size to 1.5vw.*/
+    transition: 0.25s; /*Sets the time the class transitions an element which is determined in the chosen element's :hover to 0.25 seconds.*/
+    color: #000000; /*Sets the text color of the class to black.*/
 }
 /*The :hover is used to stylise the chosen tag when the cursor hovers over it.*/
-a:hover {
-    color: #a9a9a9;/*Sets the color when the cursor hovers over the chosen tag to grey.*/
+.pages:hover {
+    color: #a9a9a9; /*Sets the color when the cursor hovers over the chosen tag to grey.*/
+}
+/*Class which separates the hyper links of the pages.*/
+.barrier {
+    margin: 0%;
+    float: right;
+    line-height: 7vw;
+    font-size: 1.5vw;
+    color: #000000;
+}
+/*This class is for a logo which will be in the navigation bar on the left of it.*/
+.logo {
+    float: left; /*Makes the logo horizontally align to the right of the header tag.*/
+    width: 5.5vw;
+    height: 5.5vw;
+    margin: 0.35vw 0% 0% 1.5vw;
+}
+/*This class is where the main content of the webpages will be on, with teg class being a background for the content to be in front of.*/
+.background {
+    background-image: url("temp.webp"); /*This identifies which image will be used on the background.*/
+    background-repeat: no-repeat; /*Makes the background unable to repeat the image.*/
+    background-position: center; /*Positions the image so that its centered as the background.*/
+    background-size: cover; /*Makes the image cover the 2 dimensions stated below.*/
+    width: 100%;
+    min-height: 97vh; /*Sets the minimum height as 97vh, with vh being a measurement in relation to the height of the device screen.*/
+}
+/*This class is to add a filter to the background image.*/
+.filter {
+    position: relative; /*Sets the chosen element's position to relative where it normally is.*/
+}
+/*The ::before is to add sonething before the element stated before the ::before.*/
+.filter::before {
+    z-index: 1; /*Sets the position of the chosen element on the z-axiz, forwards and backwards, to 1.*/
+    content: ""; /*Sets the content of the element to nothing.*/
+    display: block;
+    position: absolute; /*Sets the position of the element absolutely in relation of the element it's contained in.*/
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px) brightness(50%); /*Sets the filters on the background image to a blur of 5 pixels and set the image's brightness to half.*/
+}
+/* This class is to stylise the copyright notice in the footer.*/
+.copyright {
+    margin: 0%;
+    line-height: 4vw;
+    font-size: 0.5vw;
+    color: #000000;
+}
+/*This class is to stylise the text at the top of each web page.*/
+.title {
+    z-index: 1;
+    position: relative;
+    margin: 1.5vw 0% 0% 0%;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 100; /*Sets the weight of the font, or thickness, to 100. The bigger the number, the thicker the font, with 100 being the smallest number.*/
+    color: #ffffff;
+}
+/*This class is to create a box on the contact web page of the website where the inputs for an email will be in.*/
+.email {
+    z-index: 1;
+    position: relative;
+    margin: 1.5vw 0% 0% 25vw;
+    width: 50vw;
+    height: 60vh;
+    border: none; /*Makes the element not have a visible border around it.*/
+    border-radius: 10px; /*Sets the radiua of the border's corners to 10 pixels.*/
+    background-color: #ffffff;
+    opacity: 75%; /*Sets the opacity of the class to 75% opaque.*/
+}
+/*This class is to stylise the text used to instruct the user on what to put in the inputs in the contacts box.*/
+.instructions {
+    margin: 0%;
+    line-height: 4vw;
+    font-weight: 600;
+    position: initial;
+    text-align: center;
+}
+/*Both the input[type=text] and textarea tags allow the user to input text into it, with the former for short, 1 line inputs while the later is for longer inputs like paragraphs.*/
+input[type=text], textarea {
+    margin: 0% 0% 0% 12.5%;
+    width: 75%;
+    background-color: #ffffff;
+    border: 3px solid #a9a9a9; /*Sets the border to 3 pixel wide, solid and grey.*/
+    border-radius: 5px;
+    transition: 0.25s;
+    outline: none; /*Makes no outline when the user clicks on the tags.*/
+    resize: none; /*Makes the user unable to change the size of the tags.*/
+}
+/*The :focus changes an element of the chosen tag when it has been clicked on.*/
+input[type=text]:focus, textarea:focus {
+    border-color: #000000;
+}
+/*Sets the height of input[type=text].*/
+.address {
+    height: 5%; 
+}
+/*Sets the height of textarea.*/
+.content {
+    height: 35%;
+}
+/*Stylises the button the user presses to send the email.*/
+input[type=button] {
+    margin: 0.25vh 0% 0% 42.5%;
+    width: 15%;
+    height: 10%;
+    color: #ffffff;
+    background-color: #3980be; /*Sets the background color to blue.*/
+    border: none;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+/*The aspects of the button that changes when the user hovers over it.*/
+input[type=button]:hover {
+    cursor: pointer; /*Sets the cursor when it hovers over the button to a pointer.*/
+    background-color: #a9a9a9;
 }
