@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!--This tells the computer that this file is a website.-->
-<html>
+<!--This tells the computer that this file is a website and sets the language to english.-->
+<html lang="en">
     <!--The head tag holds meta data of this file and links to other files that will be used in this file.-->
     <head>
         <title>RSHS Arts Council | Projects</title><!--States the title of the webpage.-->
-        <link rel="icon" type="image/x-icon" href="logo.png">
+        <link rel="icon" type="image/x-icon" href="logo.png"> <!--Creates an image to show in the tab of a web browser.-->
         <link rel="stylesheet" href="style.css"><!--Links to CSS file which will add style to this file.-->
         <meta charset="utf-8"><!--Sets the character set to unicode.-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Sets the inital viewing scale of the page to 1.-->
@@ -14,9 +14,9 @@
         <header>
             <!--The a tags are links to the other webpages of the website.-->
             <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council"></a>
-            <a class="pages" href="contact.html">CONTACT</a>
+            <a class="pages" href="mailto:arts-council-2022@rhs.school.nz">CONTACT</a> <!--This link leads to the user's email with the "Sent to:" section filled out with the arts council's email.-->
             <h1 class="barrier">|</h1>
-            <a class="pages" href="about.html">ABOUT</a>
+            <a class="pages" href="about.html">WHO WE ARE</a>
             <h1 class="barrier">|</h1>
             <a class="pages" href="members.html">MEMBERS</a>
             <h1 class="barrier">|</h1>
@@ -27,6 +27,17 @@
         <!--The background and filter class is where the main content of the web page will be in and has the background image and filter respectively that the content will be in front of.-->
         <div class="background filter">
             <h1 class="title">- PROJECTS -</h1> <!--The h1 tag is used to state the title of the web page.-->
+            <!--This div class creates a box where images and photos of the arts council's projects are.-->
+            <div class="projects">
+                <img class="projects_img" src="temp1.jpeg"> <!--Creates an image of a project the arts council has done.-->
+                <h1 class="projects_title">Lorem Ipsum</h1> <!--This is the name for the arts council project.-->
+                <p class="projects_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <!--This is text about the arts council project.-->
+            </div>
+            <div class="projects">
+                <img class="projects_img" src="temp2.webp">
+                <h1 class="projects_title">Lorem Ipsum</h1>
+                <p class="projects_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
         <!--The footer tag is at the bottom of the page and is where the copyright notice for the website will be.-->
         <footer>
