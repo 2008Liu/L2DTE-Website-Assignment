@@ -27,8 +27,8 @@ footer {
     height: 4vw;
     background-color: #ffffff;
 }
-/*a is the tag for hyperlinks while h1 and p are both tags for text, with h1 for big text such as titles and p being for small text like paragraphs. input[type-button] is a tag which the user interacts with, in this case pressing on it due to its type being a button.*/
-a, h1, p, h6, input[type=button] {
+/*a is the tag for hyperlinks while h1 and p are both tags for text, with h1 for big text such as titles and p being for small text like paragraphs. */
+a, h1, p, h6 {
     font-family: "Nunito Sans", sans-serif; /*This sets the font of the selected tags to "Nunito Sans".*/
 }
 /*.pages is a class. Classes are sets of styles which can be placed onto one or multiple tags. This class is for links to content outside the webpage such as other webpages and websites.*/
@@ -62,6 +62,7 @@ a, h1, p, h6, input[type=button] {
 }
 /*This class is where the main content of the webpages will be on, with teg class being a background for the content to be in front of.*/
 .background {
+    text-align: center; /*Sets text inside class to be horizontally center of it.*/
     background-image: url("temp.webp"); /*This identifies which image will be used on the background.*/
     background-repeat: no-repeat; /*Makes the background unable to repeat the image.*/
     background-position: center; /*Positions the image so that its centered as the background.*/
@@ -85,9 +86,10 @@ a, h1, p, h6, input[type=button] {
 }
 /* This class is to stylise the copyright notice in the footer.*/
 .copyright {
+    font-weight: 400;
     margin: 0%;
     line-height: 4vw;
-    font-size: 0.5vw;
+    font-size: 1vw;
     color: #000000;
 }
 /*This class is to stylise the text at the top of each web page.*/
@@ -95,67 +97,117 @@ a, h1, p, h6, input[type=button] {
     z-index: 1;
     position: relative;
     margin: 1.5vw 0% 0% 0%;
-    text-align: center;
+    text-align: center; /*Sets the class' text to be in the center of element it's inside of.*/
     font-size: 5vw;
     font-weight: 100; /*Sets the weight of the font, or thickness, to 100. The bigger the number, the thicker the font, with 100 being the smallest number.*/
     color: #ffffff;
 }
-/*This class is to create a box on the contact web page of the website where the inputs for an email will be in.*/
-.email {
+/*This class is to stylise the image on the about page of my website.*/
+.about_img {
     z-index: 1;
     position: relative;
-    margin: 1.5vw 0% 0% 25vw;
-    width: 50vw;
-    height: 60vh;
-    border: none; /*Makes the element not have a visible border around it.*/
-    border-radius: 10px; /*Sets the radiua of the border's corners to 10 pixels.*/
-    background-color: #ffffff;
-    opacity: 75%; /*Sets the opacity of the class to 75% opaque.*/
+    width: 35vw;
+    height: 35vw;
+    border-radius: 10px; /*Rounds the corners of the border around the class to 10 pixels.*/
+    margin: 2.5vw 0% 0% 8vw;
 }
-/*This class is to stylise the text used to instruct the user on what to put in the inputs in the contacts box.*/
-.instructions {
-    margin: 0%;
-    line-height: 4vw;
-    font-weight: 600;
-    position: initial;
+/*This class creates a box in the about page where text will go in.*/
+.about{
+    text-align: left;
+    z-index: 1;
+    position: relative;
+    width: 45vw;
+    height: 30vw;
+    background-color:#ffffff;
+    border-radius: 10px;
+    margin: 5vw 8vw 0% 0%;
+    float: right;
+}
+/*This class stylises the text on the about page.*/
+.about_text {
+    text-align: left;
+    margin: 1vw 0% 0% 1vw;
+    font-size: 2vw;
+}
+/*This class creates a box that the pictures and names of people in the arts council will be in.*/
+.members {
+    display: inline-block; /*Sets the display type of the class to inline-block which stays in an already used line and allows elements to be beside it.*/
+    z-index: 1;
+    position: relative;
+    background-color: #ffffff;
+    min-width: 12vw;
+    margin: 1.5vw 8vw;
+    min-height: 16vw;
+    border-radius: 10px;
+}
+/*This class stylises the titles that people in the council hold*/
+.member_title {
+    color: #000000;
+    margin: 1vw 2vw 0 2vw;
     text-align: center;
+    font-size: 5vw;
+    font-weight: 800;
+/*This class is where the picture and name of a person in the council will go in.*/
 }
-/*Both the input[type=text] and textarea tags allow the user to input text into it, with the former for short, 1 line inputs while the later is for longer inputs like paragraphs.*/
-input[type=text], textarea {
-    margin: 0% 0% 0% 12.5%;
-    width: 75%;
+.member_people {
+    border-radius: 10px;
+    vertical-align: text-top; /*Vertically aligns the class so text is above it.*/
     background-color: #ffffff;
-    border: 3px solid #a9a9a9; /*Sets the border to 3 pixel wide, solid and grey.*/
+    display: inline-block;
+    text-align: center;
+    margin: 0.5vw 1vw; /*This sets the margin of the class, with the first number being vertical margins and the second one being horizontal.*/
+    width: 13vw;
+    height: 23vw;
+}
+/*This class is to set the position and size of the photos of the council members.*/
+.member_img {
+    display: inline-block;
+    position: relative;
+    margin: 0.5vw;
+    width: 12vw;
+    height: 16vw;
     border-radius: 5px;
-    transition: 0.25s;
-    outline: none; /*Makes no outline when the user clicks on the tags.*/
-    resize: none; /*Makes the user unable to change the size of the tags.*/
+    object-fit: cover; /*Sets the image to be inside dimensions stated by cropping parts out.*/
 }
-/*The :focus changes an element of the chosen tag when it has been clicked on.*/
-input[type=text]:focus, textarea:focus {
-    border-color: #000000;
+/*This class is to stylise the text used for the names of council members.*/
+.member_text {
+    text-align: center;  
+    margin: 0.5vw;
+    font-size: 1.5vw;  
+    font-weight: 400;
+    color: #000000;
 }
-/*Sets the height of input[type=text].*/
-.address {
-    height: 5%; 
+/*This class creates a box where the images and text of the council's projects will be.*/
+.projects {
+    z-index: 1;
+    position: relative;
+    width: 70vw;
+    margin: 2.5vw 15vw;
+    height: 25vw;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
-/*Sets the height of textarea.*/
-.content {
-    height: 35%;
-}
-/*Stylises the button the user presses to send the email.*/
-input[type=button] {
-    margin: 0.25vh 0% 0% 42.5%;
-    width: 15%;
-    height: 10%;
-    color: #ffffff;
-    background-color: #3980be; /*Sets the background color to blue.*/
-    border: none;
+/*This class sets the dimensions and position of the image inside the projects box.*/
+.projects_img {
+    float: left;
+    object-fit: cover;
+    object-position: center; /*Sets the image's center to be in the dimensions stated.*/
+    width: 25vw;
+    height: 20vw;
+    margin: 2.5vw 2vw;
     border-radius: 5px;
-    transition: 0.25s;
 }
-/*The aspects of the button that changes when the user hovers over it.*/
-input[type=button]:hover {
-    cursor: pointer; /*Sets the cursor when it hovers over the button to a pointer.*/
-    background-color: #a9a9a9;
+/*The two classes are for the names of the projects and text for what the projects are about respectively.*/
+.projects_title, .projects_text {
+    float: left;
+    margin: 0;
+    width: 38vw;
+}
+.projects_title {
+    font-size: 5vw;
+    font-weight: 800;
+}
+.projects_text {
+    font-size: 1.25vw;
+    font-weight: 400;
 }
