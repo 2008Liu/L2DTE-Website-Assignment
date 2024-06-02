@@ -3,105 +3,109 @@
 <html lang="en">
     <!--The head tag holds meta data of this file and links to other files that will be used in this file.-->
     <head>
-        <title>RSHS Arts Council | Members</title><!--States the title of the webpage.-->
+        <title>RSHS Arts Council | Members</title> <!--States the title of the webpage.-->
         <link rel="icon" type="image/x-icon" href="logo.png"> <!--Creates an image to show in the tab of a web browser.-->
-        <link rel="stylesheet" href="style.css"><!--Links to CSS file which will add style to this file.-->
-        <meta charset="utf-8"><!--Sets the character set to unicode.-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Sets the inital viewing scale of the page to 1.-->
+        <link rel="stylesheet" href="style.css"> <!--Links to a CSS file which will add style to this file.-->
+        <script src="function.js"></script> <!--Links to a Javascript file which will add user functionality to the web page.-->
+        <meta charset="utf-8"> <!--Sets the character set to unicode.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Sets the inital viewing scale of the page to 1.-->
     </head>
     <body>
         <!--The header tag is the navigation bar which has links to other webpages of the website.-->
         <header>
-            <!--The a tags are links to the other webpages of the website.-->
-            <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council"></a>
-            <a class="pages" href="mailto:arts-council-2022@rhs.school.nz">CONTACT</a> <!--This link leads to the user's email with the "Sent to:" section filled out with the arts council's email.-->
-            <h1 class="barrier">|</h1>
-            <a class="pages" href="about.html">WHO WE ARE</a>
-            <h1 class="barrier">|</h1>
-            <a class="pages" href="members.html">MEMBERS</a>
-            <h1 class="barrier">|</h1>
-            <a class="pages" href="projects.html">PROJECTS</a>
-            <h1 class="barrier">|</h1>
-            <a class="pages" href="index.html">HOME</a>
+            <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council."></a> <!--This is an image that links to the "Home" page of the website.-->
+            <div class="dropdown"> <!--This div will be where a dropdown menu with the web pages of the website will be in.-->
+                <img src="navigation.png" onclick="navigation()" alt="Navigation icon."> <!--Image of the dropdown menu icon which drops it down when clicked on.-->
+                <div id="myDropdown" class="dropdown-content"> <!--This is where the links to the web pages will be in.-->
+                    <!--The a tags are links to the other webpages of the website.-->
+                    <a href="index.html">HOME</a>  
+                    <a href="projects.html">PROJECTS</a>
+                    <a href="members.html">MEMBERS</a>
+                    <a href="about.html">WHO WE ARE</a>
+                    <a href="mailto:arts-council-2022@rhs.school.nz">CONTACT</a> <!--This a tag links to the user's chosen email service with a email draft with the RSHS arts council's email address in it.-->
+                </div>
+            </div>
         </header>
-        <!--The background and filter class is where the main content of the web page will be in and has the background image and filter respectively that the content will be in front of.-->
-        <div class="background filter"> 
-            <h1 class="title">- MEMBERS -</h1> <!--The h1 tag is used to state the title of the web page.-->
+        <!--The background class is where the main content of the web page will be in and has the background image.-->
+        <div class="background"> 
+            <h1 class="title">MEMBERS</h1> <!--The h1 tag is used to state the title of the web page.-->
             <!--This div class creates a box where images and photos of arts council members are.-->
             <div class="members">
-                <h1 class="member_title">Manukura</h1> <!--The h1 tag is for big text intended for the main topic of a web page. Here, it's used to state the position a council member or members are.-->
-                <div class="member_people"> <!--This div class is where a person's photo and name will be.-->
-                    <img class="member_img" src="./members/jannat.jpg" alt="Jannat Cheema"> <!--The img tag creates photos, with it here showing a photo of an arts council member.-->
-                    <p class="member_text">Jannat Cheema</p> <!--The p tag is for small text where the main content of a web page is, with it being used here to show the name of an arts council member.-->
+                <h1>Manukura</h1> <!--The h1 tag is for big text intended for the main topic of a web page. Here, it's used to state the position a council member or members are.-->
+                <div class="member-person"> <!--This div class is where a person's photo and name will be.-->
+                    <img src="./members/jannat.jpg" alt="Jannat Cheema."> <!--The img tag creates photos, with it here showing a photo of an arts council member.-->
+                    <p>Jannat Cheema</p> <!--The p tag is for small text where the main content of a web page is, with it being used here to show the name of an arts council member.-->
                 </div>
             </div>
             <div class="members">
-                <h1 class="member_title">Council Leaders</h1>
-                <div class="member_people">
-                    <img class="member_img" src="./members/placeholder.png" alt="Zaria Nobilo">
-                    <p class="member_text">Zaria Nobilo</p>
+                <h1>Council Leaders</h1>
+                <div class="member-person">
+                    <img src="./members/placeholder.png" alt="Zaria Nobilo.">
+                    <p>Zaria Nobilo</p>
                 </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/mackenzie.jpg" alt="Mackenzie Johnston">
-                    <p class="member_text">Mackenzie Johnston</p>
-                </div>
-            </div>
-            <div class="members">
-                <h1 class="member_title">Council Coordinators</h1>
-                <div class="member_people">
-                    <img class="member_img" src="./members/navya.jpg" alt="Navya Chaudhary">
-                    <p class="member_text">Navya Chaudhary</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/isabella.jpg" alt="Isabel Aplin">
-                    <p class="member_text">Isabel Aplin</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/sahaj preet.jpg" alt="Preet Kaur">
-                    <p class="member_text">Preet Kaur</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/willow.jpg" alt="Willow Duell">
-                    <p class="member_text">Willow Duell</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/olivia.jpg" alt="Olivia Spans">
-                    <p class="member_text">Olivia Spans</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/fiona.jpg" alt="Fiona Lee">
-                    <p class="member_text">Fiona Lee</p>
-                </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/kesina.jpg" alt="Ksena Galaktionova">
-                    <p class="member_text">Ksena Galaktionova</p>
+                <div class="member-person">
+                    <img src="./members/mackenzie.jpg" alt="Mackenzie Johnston.">
+                    <p>Mackenzie Johnston</p>
                 </div>
             </div>
             <div class="members">
-                <h1 class="member_title">Senior Leader</h1>
-                <div class="member_people">
-                    <img class="member_img" src="./members/megan.png" alt="Megan Barry">
-                    <p class="member_text">Megan Barry</p>
+                <h1>Council Coordinators</h1>
+                <div class="member-person">
+                    <img src="./members/navya.jpg" alt="Navya Chaudhary.">
+                    <p>Navya Chaudhary</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/isabella.jpg" alt="Isabel Aplin.">
+                    <p>Isabel Aplin</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/sahaj preet.jpg" alt="Preet Kaur.">
+                    <p>Preet Kaur</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/willow.jpg" alt="Willow Duell.">
+                    <p>Willow Duell</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/olivia.jpg" alt="Olivia Spans.">
+                    <p>Olivia Spans</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/fiona.jpg" alt="Fiona Lee.">
+                    <p>Fiona Lee</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/kesina.jpg" alt="Ksena Galaktionova.">
+                    <p>Ksena Galaktionova</p>
                 </div>
             </div>
             <div class="members">
-                <h1 class="member_title">Staff Support</h1>
-                <div class="member_people">
-                    <img class="member_img" src="./members/sudhir.png" alt="Sudhir Duppati">
-                    <p class="member_text">Sudhir Duppati</p>
+                <h1>Senior Leader</h1>
+                <div class="member-person">
+                    <img src="./members/megan.png" alt="Megan Barry.">
+                    <p>Megan Barry</p>
                 </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/renate.png" alt="Renate O'Sullivan">
-                    <p class="member_text">Renate O'Sullivan</p>
+            </div>
+            <div class="members">
+                <h1>Staff Support</h1>
+                <div class="member-person">
+                    <img src="./members/sudhir.png" alt="Sudhir Duppati.">
+                    <p>Sudhir Duppati</p>
                 </div>
-                <div class="member_people">
-                    <img class="member_img" src="./members/placeholder.png" alt="Vicki Jordan">
-                    <p class="member_text">Vicki Jordan</p>
+                <div class="member-person">
+                    <img src="./members/renate.png" alt="Renate O'Sullivan.">
+                    <p>Renate O'Sullivan</p>
+                </div>
+                <div class="member-person">
+                    <img src="./members/placeholder.png" alt="Vicki Jordan.">
+                    <p>Vicki Jordan</p>
                 </div>
             </div>
         </div>
         <!--The footer tag is at the bottom of the page and is where the copyright notice for the website will be.-->
         <footer>
+            <a href="https://www.instagram.com/rshs_art/"><img class="instagram" src="instagram.png" alt="Instagram logo."></a> <!--This creates an image of the Instagram logo which links to the arts council's Instagram account.-->
+            <a class="address" href="https://www.instagram.com/rshs_art/">@rshs_art</a> <!--This states the arts council's Instagram account address and also links to the account.-->
             <h6 class="copyright">© 2024 by Rototuna Senior High Arts Council</h6> <!--The h6 tag are used for the copyright notice.-->
         </footer>
     </body>
