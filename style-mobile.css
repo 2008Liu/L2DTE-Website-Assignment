@@ -1,0 +1,336 @@
+/*Sets the following CSS code for screens 800 pixels wide or less.*/
+@media only screen and (max-width: 768px) {
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); /*Imports the "Nunito Sans" font into the file.*/
+    /*Styles the body tag which is where content such as the text and photos are.*/
+    body {
+        width: 100%; /*Sets the width of the chosen tag to 100% of the width of the device screen.*/
+        height: 100%; /* Sets the height of the chosen tag to 100% of the height of the device screen.*/
+        margin: 0; /*Sets the margin, or empty space around the chosen tag, to 0 or none.*/
+        display: flex; /*Sets the type of box that the tag is rendered in. In this instance, the flex type is chosen which allows the manipulation of the aspects of elements inside the tag.*/
+        flex-direction: column; /*Sets the direction of the elements inside the flex tag to horizontal.*/
+        background-image: url("temp_background.png"); /*This identifies which image will be used on the background.*/
+        background-repeat: no-repeat; /*Makes the background unable to repeat the image.*/
+        background-position: center; /*Positions the image so that its center is the background.*/
+        background-size: cover; /*Makes the image cover the dimensions specified without stretching it.*/
+        padding: 0; /*Sets the padding or extra space added to an element to none.*/
+        justify-content: center; /*Spaces content inside the tag so that they're centered horizontally.*/
+        align-items: center; /*Centers the items inside the tag vertically.*/
+    }
+    /*The header tag is for content at the top of a web page. Here, it'll be a navigation bar.*/
+    header{
+        display: block; /*Sets the display type to block which treats the element as separate from other tags through line breaks.*/
+        margin: 0;
+        width: 100%;
+        height: 10vh; /*Sets the height of the chosen tag to 7vw, with vw being a unit that relates to the device screen width.*/
+        background-color: #ffffff; /*Sets the background color of the tag to white.*/
+    }
+    /*The footer tag for content at the bottom of a web page. Here, it'll contain a copyright notice and the RSHS art council's Instagram account.*/
+    footer {
+        margin: 0;
+        bottom: 0; /*Sets the position of the tag to the bottom of the page.*/
+        position: initial; /*Sets the position of the tag to its default value which is relative.*/
+        width: 100%;
+        height: fit-content;
+        background-color: #ffffff;
+    }
+    /*a is the tag for hyperlinks while h1 and p are both tags for text, with h1 for big text such as titles and p being for small text like paragraphs. Lastly, h6 is for very small text.*/
+    a, h1, p, h6 {
+        font-family: "Nunito Sans", sans-serif; /*This sets the font of the selected tags to "Nunito Sans".*/
+    }
+    /*This class is where the icon and text of a dropdown in the navigation bar will be.*/
+    .dropdown {
+        float: right; /*Sets the position of the class to be on the right side of its parent element.*/
+        position: relative; /*Sets the position of the class so it's relative of its parent element.*/
+    }
+    /*This class styles the image of the icon that when clicked, shows a menu with the pages of the website.*/
+    .dropdown img {
+        width: 7vh;
+        height: 7vh;
+        margin: 1.5vh 5.75vh; /*Sets the margin, with the first number being the vertical margins and the second being the horizontal margins.*/
+        border-radius: 0.75vh; /*Rounds the corners of the image to 0.75vw.*/
+        transition: 0.25s; /*Sets the time the tag uses to change an aspect of it to 0.25 seconds.*/
+    }
+    /*The ":hover" stylises the element stated before the colon when the cursor hovers over it.*/
+    .dropdown img:hover {
+        cursor: pointer; /*Sets the cursor to a pointer.*/
+        background-color: #a9a9a9; /*Sets the background color to gray.*/
+    }
+    /*Creates a box where the links of the web pages will be in.*/
+    .dropdown-content {
+        display: none; /*Sets the class so it isn't visible.*/
+        top: 10vh; /*Sets the class so its 7vw from the top of the device screen.*/
+        position: absolute; /*Sets the class' positon so that its strictly what is stated in its css, not affected by other elements.*/
+        background-color: #ffffff;
+        min-width: 10vh; /*Sets the minimum width of the element to 7vw.*/
+        overflow: auto; /*Sets the class so if content in it overflows the given dimensions, the content will be hidden and a scroll bar will appear.*/
+        right: 0; /*Sets the class so its to the right edge of the device screen.*/
+        border-bottom-left-radius: 1.5vh; /*Rounds the bottom left corner of the class to 1.5vw.*/
+        z-index: 1; /*Sets the z-index, the layer number of an element, to 1.*/
+    }
+    /*This a tag is to only be used in the ".dropdown-content" class and is the text that links to the web pages.*/
+    .dropdown-content a {
+        font-size: 3vh;
+        text-decoration: none; /*Makes the text have no decorations on it.*/
+        text-align: center; /*Positions the tag to the horizontal center of the class.*/
+        display: block;
+        margin: 2vh;
+        transition: 0.25s;
+    }
+    /*Changes the display of the ".display-content" class.*/
+    .show {
+        display: block;
+    }
+    /*Stylises the a tag when its hovered over by the cursor.*/
+    a:hover, .dropdown-content a:hover {
+        color: #a9a9a9; /*Sets the color of the tag to gray.*/
+    }
+    /*This class is for a logo which will be in the navigation bar on the left of it.*/
+    .logo {
+        float: left; /*Makes the logo horizontally align to the right of the header tag.*/
+        width: 7vh;
+        height: 7vh;
+        margin: 0.75vh 1.5vh; /*Sets the margin of the class, with the first, second, third and fourth numbers being the top, left, bottom and right margins respectively.*/
+    }
+    /*This class is where the main content of the webpages will be on, with the class being a background for the content to be in front of.*/
+    .background {
+        width: 100%;
+        min-height: 90vh; /*Sets the minimum height of the class to 90vh, with vh being a unit of measurement in relation to the screen device's height.*/
+    }
+    /*This class is to stylise the copyright notice in the footer.*/
+    .copyright {
+        justify-self: center;
+        font-weight: 400; /*Sets the thickness of the tag, with 100 being the thinnest and 900 being the thickest.*/
+        margin: 0 auto; 
+    }
+    /*This class is to stylise text for the Instagram address of the arts council.*/
+    .address {
+        display: inline;
+        color: #000000; /*Sets the color of the text to black.*/
+        text-decoration: none;
+        margin: 0;
+        transition: 0.25s;
+    }
+    .copyright, .address {
+        font-size: 1vh;
+    }
+    /*This class sets the position and dimensions the image of the Instagram logo.*/
+    .instagram {
+        display: block;
+        margin: 1.5vh 0.5vh; /*Sets the margin around the class to 0.5vw.*/
+        width: 3vh;
+        height: 3vh;
+    }
+    /*This class is to stylise the title of each web page.*/
+    .title {
+        margin: 3vh 0 1vw 0;
+        display: block;
+        text-align: center;
+        font-size: 5vh;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    /*This class is to stylise the image on the about page of my website.*/
+    .about-img {
+        width: 75vw;
+        height: 75vw;
+        margin: 0.125vw 12.5vw;
+    }
+    /*This class creates a box in the about page where text will go in.*/
+    .about{
+        width: 75vw;
+        height: fit-content;
+        margin: 2vh 12.5vw 5.5vh 12.5vw;
+        float: right; /*Sets the position of the class to the the right of the device screen.*/
+    }
+    /*This class stylises the text on the about page.*/
+    .about p {
+        text-align: center; /*Aligns the text to the left of the "about" class.*/
+        margin: 2vh;
+        font-size: 2vh;
+    }
+    /*This class creates a box that the pictures and names of people in the arts council will be in.*/
+    .members {
+        text-align: center;
+        position: relative;
+        display: inline-block; /*Sets the display type of the class to inline-block which stays in an already used line and allows elements to be beside it.*/
+        min-width: 50vw;
+        margin: 2vw 12vw;
+        min-height: 16vh;
+    }
+    /*This class stylises the titles that people in the council hold.*/
+    .members h1 {
+        margin: 1vh;
+        text-align: center;
+        font-size: 5vh;
+        font-weight: 800;
+    }
+    /*This class is where the picture and name of a person in the council will go in.*/
+    .member-person {
+        vertical-align: text-top; /*Vertically aligns the class so text is above it.*/
+        display: inline-block;
+        text-align: center;
+        margin: 0.125vh 0.75vh; 
+        width: 13vh;
+        height: 23.5vh;
+    }
+    /*This class is to set the position and size of the photos of the council members.*/
+    .member-person img {
+        display: inline-block;
+        margin: 0.5vh;
+        width: 12vh;
+        height: 16vh;
+        object-fit: cover; /*Sets the image to be inside dimensions stated by cropping parts out.*/
+    }
+    /*This class is to stylise the text used for the names of council members.*/
+    .member-person p {
+        text-align: center;  
+        margin: 0.5vh;
+    }
+    /*This class creates a box where the images and text of the council's projects will be.*/
+    .projects {
+        width: 65vw;
+        margin: 3vw 17.5vw;
+        height: fit-content;
+        display: inline-block;
+    }
+    /*This sets the dimensions and position of the image inside the projects box.*/
+    .projects img {
+        object-fit: cover;
+        object-position: center; /*Sets the image's center to be in the dimensions stated.*/
+        width: 50vw;
+        height: 25vh;
+        margin: 2vw 7.5vw;
+    }
+    /*These two are for the names of the projects and text for what the projects are about respectively.*/
+    .projects h1, .projects p {
+        vertical-align: text-bottom;
+        width: 55vw;
+    }
+    .projects p {
+        margin: 2vw 5vw 3vw 5vw;
+    }
+    .projects h1 {
+        margin: 0 5vw;
+        font-size: 3.5vh;
+        font-weight: 800;
+    }
+    /*This class is where the image slider for the "Home" page will be in.*/
+    .slider {
+        margin: 0;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden; /*This hides content that overflows the dimensions of the class.*/
+    }
+    /*This class is where the images and buttons for the slider will be in.*/
+    .slides {
+        width: 500%;
+        height: 50vh;
+        display: flex; /*Sets the display type to flex which allows content in the class to be spread vertically and horizontally.*/
+    }
+    /*This stylises the buttons that a user can use to select a specific image.*/
+    .slides input {
+        display: none;
+    }
+    /*This is where an image of the slider will be in.*/
+    .slide {
+        width: 20%;
+        transition: 0.5s;
+    }
+    /*Stylises the dimensions of the images in the slider.*/
+    .slide img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover; 
+        object-position: center; /*Sets the object's center to be in the dimensions specified.*/
+    }
+    /*This class is where the buttons for the user to click through the photos will be.*/
+    .navigation-manual {
+        position: relative;
+        width: 100%;
+        margin: -5vh 0 0 0; /*A negative margin means the class will be move in the opposite direction than the margin's.*/
+        display: flex;
+        justify-content: center; 
+    }
+    /*This stylises the buttons that a user can click on to select a specific photo.*/
+    .manual-btn {
+        border: 0.25vh solid #ffffff; /*Styles the border of the buttons, with 0.25vw being the width of the border of it, solid being its border type and setting its color to white.*/
+        padding: 1vh;
+        border-radius: 50%; /*Sets the border radius to 50% which makes it a circle.*/
+        cursor: pointer;
+        transition: 0.25s;
+    }
+    /*Sets the margin for every button except the last one.*/
+    .manual-btn:not(:last-child) {
+        margin: 0 2vh 0 0;
+    }
+    /*Fills the inside of the buttons white when they're hovered over.*/
+    .manual-btn:hover {
+        background-color: #ffffff;
+    }
+    /*The following three ids set the margins for the buttons. Each next button has -10% margin horizontally.*/
+    #radio1:checked ~ .first {
+        margin: 0;
+    }
+    #radio2:checked ~ .first {
+        margin: 0 -10%;
+    }
+    #radio3:checked ~ .first {
+        margin: 0  -20%;
+    }
+    /*This class will be where buttons for an auto scroll of the slider will be in.*/ 
+    .navigation-auto {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: -5vh 0 0 0;
+    }
+    /*This styles the auto scrolling buttons to be the same as the buttons the user will use.*/
+    .navigation-auto div {
+        border: 0.25vh solid #ffffff;
+        padding: 1vh;
+        border-radius: 50%;
+        transition: 0.25s;
+    }
+    /*Sets the margins of all the auto scrolling buttons except the last one.*/
+    .navigation-auto div:not(:last-child) {
+        margin: 0 2vh 0 0;
+    }
+    /*Sets the background of the auto scrolling buttons when they're hovered over to white.*/
+    #radio1:checked ~ .navigation-auto .auto-btn-1,  #radio2:checked ~ .navigation-auto .auto-btn-2, #radio3:checked ~ .navigation-auto .auto-btn-3 {
+        background-color: #ffffff;
+    }
+    /*Creates a box where text aout the website such as a motto or news will be on.*/
+    .home {
+        width: 80vw;
+        height: fit-content;
+        margin: -0.625vh 10vw 2.5vh 10vw;
+    }
+    /*Text in the "Home" page box.*/
+    .home p {
+        display: inline-block;
+        text-align: center;
+        margin: 2vh 3vh;
+    }
+    /*Rounds the borders for images in the "Members" and "Projects" pages.*/
+    .member-person img, .projects img {
+        border-radius: 0.75vh;
+    }
+    /*Sets the background color to white and rounds the corners to 1.5vw for the text boxes for the web pages of the website.*/
+    .home, .about, .members, .projects {
+        background-color: #ffffff;
+        border-radius: 1.5vh; /*Rounds the corners of the border around the classes to 1.5vw.*/
+    } 
+    /*Sets the font size to 1.5vw for the main text of the web pages for the website.*/
+    .member-person p, .about p, .home p, .projects p {
+        font-size: 2vh; 
+    }
+    /*Sets the thickness of the fonts to 600 for the main text of the web pages for the website.*/
+    .member-person p, .about p, .home p, .projects p, .dropdown-content a {
+        font-weight: 600;
+    }
+    /*Sets the color of the fonts to black for the main text of the web pages for the website.*/
+    .member-person p, .about p, .home p, .projects p, .members h1, .projects h1, .dropdown-content a {
+        color: #000000;
+    }
+}
