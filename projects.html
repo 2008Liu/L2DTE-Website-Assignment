@@ -6,33 +6,51 @@
         <title>RSHS Arts Council | Projects</title> <!--States the title of the webpage.-->
         <link rel="icon" type="image/x-icon" href="logo.png"> <!--Creates an image to show in the tab of a web browser.-->
         <link rel="stylesheet" href="style.css"> <!--Links to a CSS file which will add style to this file.-->
-        <script src="function.js"></script> <!--Links to a Javascript file which will add user functionality to the web page.-->
+        <link rel="stylesheet" href="style-mobile.css"> <!--This CSS file styles the website for mobile screens.-->
         <meta charset="utf-8"> <!--Sets the character set to unicode.-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Sets the inital viewing scale of the page to 1.-->
     </head>
     <body>
         <!--The header tag is the navigation bar which has links to other webpages of the website.-->
         <header>
-            <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council."></a> <!--This is an image that links to the "Home" page of the website.-->
-            <div class="dropdown"> <!--This div will be where a dropdown menu with the web pages of the website will be in.-->
-                <img src="navigation.png" onclick="navigation()" alt="Navigation icon."> <!--Image of the dropdown menu icon which drops it down when clicked on.-->
-                <div id="myDropdown" class="dropdown-content"> <!--This is where the links to the web pages will be in.-->
-                    <!--The a tags are links to the other webpages of the website.-->
-                    <a href="index.html">HOME</a>  
-                    <a href="projects.html">PROJECTS</a>
-                    <a href="members.html">MEMBERS</a>
-                    <a href="about.html">WHO WE ARE</a>
-                    <a href="mailto:arts-council-2022@rhs.school.nz">CONTACT</a> <!--This a tag links to the user's chosen email service with a email draft with the RSHS arts council's email address in it.-->
+            <!--This tag is where links to the web pages will be.-->
+            <nav class="navbar">
+                <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council."></a> <!--This is an image that links to the "Home" page of the website.-->
+                <!--This is the dropdown menu of the links that is visible for mobile screens.-->
+                <ul class="nav-menu">
+                    <!--This tag is where the individual links are in.-->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">HOME</a> <!--This is a link to one of web pages of the website.-->
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="members.html" class="nav-link">MEMBERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">WHO WE ARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:arts-council-2022@rhs.school.nz" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+                <!--This class creates the icon for the dropdown menu.-->
+                <div class="icon">
+                    <span class="line"></span> <!--This is a line of the icon.-->
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </div>
-            </div>
+            </nav>
         </header>
+        <script src="nav.js"></script> <!--This script makes the dropdown menu interactible with users.-->
         <!--The background class is where the main content of the web page will be in and has the background image.-->
         <div class="background">
             <h1 class="title">PROJECTS</h1> <!--The h1 tag is used to state the title of the web page.-->
             <!--This div class creates a box where images and photos of the arts council's projects are.-->
             <div class="projects">
                 <img src="temp1.jpeg" alt="Temporary photo 1."> <!--Creates an image of a project the arts council has done.-->
-                <h1>Lorem Ipsum</h1> <!--This is the name for the arts council project.-->
+                <h1>White Noise Wednesday</h1> <!--This is the name for the arts council project.-->
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <!--This is text about the arts council project.-->
             </div>
             <div class="projects">
@@ -48,9 +66,9 @@
         </div>
         <!--The footer tag is at the bottom of the page and is where the copyright notice for the website will be.-->
         <footer>
+            <h6 class="copyright">© 2024 by Rototuna Senior High Arts Council</h6> <!--The h6 tag are used for the copyright notice.-->
             <a href="https://www.instagram.com/rshs_art/"><img class="instagram" src="instagram.png" alt="Instagram logo."></a> <!--This creates an image of the Instagram logo which links to the arts council's Instagram account.-->
             <a class="address" href="https://www.instagram.com/rshs_art/">@rshs_art</a> <!--This states the arts council's Instagram account address and also links to the account.-->
-            <h6 class="copyright">© 2024 by Rototuna Senior High Arts Council</h6> <!--The h6 tag are used for the copyright notice.-->
         </footer>
     </body>
 </html>
