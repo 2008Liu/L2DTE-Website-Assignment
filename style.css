@@ -5,7 +5,7 @@ body {
     height: 100%; /* Sets the height of the tag to 100% of the height of the device screen.*/
     display: flex; /*Sets the type of box that the tag is rendered in. In this instance, the flex type is chosen which allows the manipulation of the aspects of elements inside the tag.*/
     flex-direction: column; /*Sets the direction of the elements inside the flex tag to horizontal.*/
-    background-image: url("temp_background.png"); /*This identifies which image will be used on the background.*/
+    background-image: url("background.png"); /*This identifies which image will be used on the background.*/
     background-repeat: no-repeat; /*Makes the background unable to repeat the image.*/
     background-position: center; /*Positions the image so that its center is the background.*/
     background-size: cover; /*Makes the image cover the dimensions specified without stretching it.*/
@@ -25,7 +25,7 @@ header{
 }
 /*The footer tag for content at the bottom of a web page. Here, it'll contain a copyright notice and the RSHS art council's Instagram account.*/
 footer {
-    display: inline; /*Sets the class so it is on a new line, separate from previous elements.*/
+    display: inline; /*Sets the display type of the element so its on the same line as others.*/
     text-align: center; /*Aligns the text so it's horizontally centered in the tag.*/
     bottom: 0; /*Sets the position of the tag to the bottom of the page.*/
     position: initial; /*Sets the position of the tag to its default value which is relative.*/
@@ -91,18 +91,19 @@ li {
 }
 /*This class is to stylise the copyright notice in the footer.*/
 .copyright {
-    margin: 1.25vw 0; 
+    margin: 1vw 0;
 }
 /*This class is to stylise text for the Instagram address of the arts council.*/
 .address {
     color: #000000; /*Sets the color of the text to black.*/
-    display: inline-block; /*This sets the display type of the class to inline, meaning the class will be displayed in the same line as other elements.*/
     text-decoration: none;
-    margin: 0.8vw 0;
     transition: 0.25s;
+    margin: 0.75vw 0;
+    display: inline-block; /*This sets the display type of the class to inline, meaning the class will be displayed in the same line as other elements.*/
     vertical-align: top; /*Vertically aligns the class so it's at the top of the tag it's in.*/
 }
 .copyright, .address {
+    font-weight: 600; /*Sets the thickness of the tag, with 100 being the thinnest and 900 being the thickest.*/
     font-size: 1vw; /*Sets the font size of the classes to 1vw.*/
 }
 /*This class sets the position and dimensions the image of the Instagram logo.*/
@@ -142,13 +143,13 @@ li {
     position: relative;
     display: inline-block; /*Sets the display type of the class to inline-block which stays in an already used line and allows elements to be beside it.*/
     width: fit-content;
-    margin: 1vw 11vw;
+    margin: 0 10vw 4vw 10vw;
     height: fit-content;
 }
 /*This class stylises the titles that people in the council hold.*/
 .members h1 {
     text-align: center;
-    margin: 1vw;
+    margin: 1vw 2.5vw;
     font-size: 5vw;
     font-weight: 800;
 }
@@ -157,15 +158,15 @@ li {
     display: inline-block;
     text-align: center;
     margin: 0.125vw 1.5vw; 
-    width: 15vw;
-    height: 23.5vw;
+    width: 20vw;
+    height: 27vw;
 }
 /*This class is to set the position and size of the photos of the council members.*/
 .member-person img {
     display: inline-block;
     margin: 0.5vw;
-    width: 14vw;
-    height: 18vw;
+    width: 19vw;
+    height: 22vw;
     object-fit: cover; /*Sets the image to be inside dimensions stated by cropping parts out.*/
 }
 /*This class is to stylise the text used for the names of council members.*/
@@ -175,8 +176,8 @@ li {
 }
 /*This class creates a box where the images and text of the council's projects will be.*/
 .projects {
-    width: 70vw;
-    margin: 3vw 15vw;
+    width: 80vw;
+    margin: 3vw 10vw;
     height: 28vw;
 }
 /*This sets the dimensions and position of the image inside the projects box.*/
@@ -184,16 +185,17 @@ li {
     float: left;
     object-fit: cover;
     object-position: center; /*Sets the image's center to be in the dimensions stated.*/
-    width: 25vw;
+    width: 27.5vw;
     height: 22vw;
-    margin: 3vw 2vw;
+    margin: 3vw 2.5vw;
 }
 /*These two are for the names of the projects and text for what the projects are about respectively.*/
 .projects h1, .projects p {
     float: left;
-    width: 40vw;
+    width: 45vw;
 }
 .projects h1 {
+    margin: 3vw 0 1vw 0;
     font-size: 3.5vw;
     font-weight: 800;
 }
@@ -243,7 +245,7 @@ li {
 }
 /*Sets the margin for every button except the last one.*/
 .manual-btn:not(:last-child) {
-    margin: 0 2vw 0 0;
+    margin: 0 10vw 0 0;
 }
 /*Fills the inside of the buttons white when they're hovered over.*/
 .manual-btn:hover {
@@ -276,7 +278,7 @@ li {
 }
 /*Sets the margins of all the auto scrolling buttons except the last one.*/
 .navigation-auto div:not(:last-child) {
-    margin: 0 2vw 0 0;
+    margin: 0 10vw 0 0;
 }
 /*Sets the background of the auto scrolling buttons when they're hovered over to white.*/
 #radio1:checked ~ .navigation-auto .auto-btn-1, #radio2:checked ~ .navigation-auto .auto-btn-2, #radio3:checked ~ .navigation-auto .auto-btn-3 {
