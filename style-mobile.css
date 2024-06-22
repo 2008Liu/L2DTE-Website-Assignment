@@ -7,7 +7,7 @@
         height: 100%; /* Sets the height of the tag to 100% of the height of the device screen.*/
         display: flex; /*Sets the type of box that the tag is rendered in. In this instance, the flex type is chosen which allows the manipulation of the aspects of elements inside the tag.*/
         flex-direction: column; /*Sets the direction of the elements inside the flex tag to horizontal.*/
-        background-image: url("temp_background.png"); /*This identifies which image will be used on the background.*/
+        background-image: url("background.png"); /*This identifies which image will be used on the background.*/
         background-repeat: no-repeat; /*Makes the background unable to repeat the image.*/
         background-position: center; /*Positions the image so that its center is the background.*/
         background-size: cover; /*Makes the image cover the dimensions specified without stretching it.*/
@@ -159,14 +159,14 @@
     /*This class stylises the text on the about page.*/
     .about p {
         text-align: center; /*Aligns the text to the left of the "about" class.*/
-        margin: 3vw 4vw;
+        margin: 5vh;
     }
     /*This class creates a box that the pictures and names of people in the arts council will be in.*/
     .members {
         position: relative;
         display: inline-block; /*Sets the display type of the class to inline-block which stays in an already used line and allows elements to be beside it.*/
         max-width: 80vw; /*Sets the maximum width of the class to 80vw.*/
-        margin: 1vw 10vw 4vw 10vw;
+        margin: 0 10vw 4vw 10vw;
         height: fit-content;
     }
     /*This class stylises the titles that people in the council hold.*/
@@ -180,14 +180,14 @@
     .member-person {
         display: inline-block;
         margin: 0 3vh; 
-        width: 35vw;
-        height: 35vh;
+        width: 50vw;
+        height: 52vh;
     }
     /*This class is to set the position and size of the photos of the council members.*/
     .member-person img {
         display: inline;
-        width: 35vw;
-        height: 30vh;
+        width: 50vw;
+        height: 40vh;
         object-fit: cover; /*Sets the image to be inside dimensions stated by cropping parts out.*/
     }
     /*This class is to stylise the text used for the names of council members.*/
@@ -200,7 +200,7 @@
     .projects {
         display: inline-block;
         width: 70vw;
-        margin: 1vw 15vw;
+        margin: 0 15vw 4vw 15vw;
         height: fit-content;
     }
     /*This sets the dimensions and position of the image inside the projects box.*/
@@ -210,16 +210,19 @@
         object-position: center; /*Sets the image's center to be in the dimensions stated.*/
         width: 60vw;
         height: 35vh;
-        margin: 3vh 5vw;
+        margin: 4vh 5vw;
     }
-    /*These two are for the names of the projects and text for what the projects are about respectively.*/
-    .projects h1, .projects p {
-        margin: 2vh 5vw;
-        width: 60vw;
-    }
+    /*This is to stylise the title for the projects that the council has done.*/
     .projects h1 {
         font-size: 5vh;
         font-weight: 800;
+        width: 60vw;
+        margin: 0 5vw;
+    }
+    /*This is to stylise text about the projects that the councul has done.*/
+    .projects p {
+        width: 60vw;
+        margin: 3.5vh 5vw;
     }
     /*This class is where the image slider for the "Home" page will be in.*/
     .slider {
@@ -317,7 +320,7 @@
     .home p {
         display: inline-block;
         text-align: center;
-        margin: 2vw 3vw;
+        margin: 6vw;
     }
     /*Rounds the borders for images in the "Members" and "Projects" pages.*/
     .member-person img, .projects img {
