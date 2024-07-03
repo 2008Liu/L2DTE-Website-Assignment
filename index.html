@@ -1,95 +1,17 @@
 <!DOCTYPE html>
-<!--This tells the computer that this file is a website and sets the language to english..-->
-<html lang="en">
-    <!--The head tag holds meta data of this file and links to other files that will be used in this file.-->
+<html>
     <head>
-        <title>RSHS Arts Council</title> <!--States the title of the webpage.-->
-        <link rel="icon" type="image/x-icon" href="logo.png"> <!--Creates an image to show in the tab of a web browser.-->
-        <link rel="stylesheet" href="style.css"> <!--Links to a CSS file which will add style to this file.-->
-        <link rel="stylesheet" href="style-mobile.css"> <!--This CSS file styles the website for mobile screens.-->
-        <meta charset="utf-8"> <!--Sets the character set to unicode.-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Sets the inital viewing scale of the page to 1.-->
+        <title>a webpage.</title>
+        <link rel="icon" type="image/x-icon" href="favicon.jpg">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="function.js"></script>
     </head>
-    <!--The body tag is where content such as text and images will be.-->
     <body>
-        <!--The header tag is the navigation bar which has links to other webpages of the website.-->
-        <header>
-            <!--This tag is where links to the web pages will be.-->
-            <nav class="navbar">
-                <a class="logo" href="index.html"><img class="logo" src="logo.png" alt="RSHS Arts Council."></a> <!--This is an image that links to the "Home" page of the website.-->
-                <!--This is the dropdown menu of the links that is visible for mobile screens.-->
-                <ul class="nav-menu">
-                    <!--This tag is where the individual links are in.-->
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">HOME</a> <!--This is a link to one of web pages of the website.-->
-                    </li>
-                    <li class="nav-item">
-                        <a href="projects.html" class="nav-link">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="members.html" class="nav-link">MEMBERS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">WHO WE ARE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mailto:arts-council-2022@rhs.school.nz" class="nav-link">CONTACT</a>
-                    </li>
-                </ul>
-                <!--This class creates the icon for the dropdown menu.-->
-                <div class="icon">
-                    <span class="line"></span> <!--This is a line of the icon.-->
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-            </nav>
-        </header>
-        <script src="nav.js"></script> <!--This script makes the dropdown menu interactible with users.-->
-        <!--The background class is where the main content of the web page will be in and has the background image.-->
-        <div class="background">
-            <div class="slider"> <!--This div is where an image slider with images of the council that automatically scrolls and which the user can also control will be in.-->
-                <div class="slides"> <!--This div will be where the images are in.-->
-                    <!--The inputs are to identify the images as part of the image slider so they can be automatically scrolled through.-->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <div class="slide first"> <!--The "slide" class is where the individual images will be in. The "first" class also states this speciic image as the first to show.-->
-                        <img src="temp1.jpeg" alt="Temporary photo 1."> <!--The img tag creates an image in the web page.-->
-                    </div>
-                    <div class="slide">
-                        <img src="temp2.webp" alt="Temporary photo 2.">
-                    </div>
-                    <div class="slide">
-                        <img src="temp3.webp" alt="Temporary photo 3.">
-                    </div>
-                </div>
-                <!--This div is for the buttons which automatically switch images in the slider.-->
-                <div class="navigation-auto">
-                    <!--The divs here are the buttons.-->
-                    <div class="auto-btn-1"></div>
-                    <div class="auto-btn-2"></div>
-                    <div class="auto-btn-3"></div>
-                </div>
-            </div>
-            <!--This div is where buttons that the user can use to select a specific image will be in.-->
-            <div class="navigation-manual">
-                <!--The label tags are for identifying what images are connected to which button.-->
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-            <script src="slider.js"></script>
-            <h1 class="title">RSHS ARTS COUNCIL</h1> <!--This states the title and topic of the website.-->
-            <!--This div creates a box that text about the website will go into.-->
-            <div class="home">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <!--This is text about the website.-->
-            </div>
+        <div class="title">
+            <h1 onclick="pressHere()">press here.</h1>
+            <p id="pressHere"></p>
         </div>
-        <!--The footer tag is at the bottom of the page and is where the copyright notice for the website will be.-->
-        <footer>
-            <h6 class="copyright">© 2024 by Rototuna Senior High Arts Council</h6> <!--The h6 tag are used for the copyright notice.-->
-            <a href="https://www.instagram.com/rshs_art/"><img class="instagram" src="instagram.png" alt="Instagram logo."></a> <!--This creates an image of the Instagram logo which links to the arts council's Instagram account.-->
-            <a class="address" href="https://www.instagram.com/rshs_art/">@rshs_art</a> <!--This states the arts council's Instagram account address and also links to the account.-->
-        </footer>
     </body>
 </html>
