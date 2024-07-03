@@ -21,7 +21,7 @@
         box-sizing: border-box; /*Sets the dimensions of elements so they're based on the content inside them.*/
     }
     /*The header tag is for content at the top of a web page. Here, it'll be a navigation bar.*/
-    header{
+    header {
         width: 100%;
         background-color: #ffffff; /*Sets the background color of the tag to white.*/
     }
@@ -151,7 +151,7 @@
         margin: 0 10vw;
     }
     /*This class creates a box in the about page where text will go in.*/
-    .about{
+    .about {
         width: 80vw;
         height: fit-content;
         margin: 5vh 10vw;
